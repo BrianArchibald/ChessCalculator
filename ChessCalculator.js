@@ -3,10 +3,12 @@
 // Get ratings of opponents
 
 // Calculate ratings difference between opponent and subject
+	// Add up the total difference between opponent and subject
 
 // What is the winning expectancies against each opponent 
 
 // Add up the winning expectancies (W)
+	// then compare to actual score of total games
 
 // What was subjects total score for the event (S)
 
