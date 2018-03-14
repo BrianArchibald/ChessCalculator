@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chess Calculator</title>
+	<title>Chess Calc</title>
 </head>
 <body>
-	<h1>Chess Calculator!</h1>
+	<h1>Chess Rating Calculator</h1>
+	<form>
+		<div>
+			<label for="originalRating">Your Rating </label>
+			<input type="number" id="originalRating" minlength="3" maxlength="4">
+			<label for="originalRating">Event Score </label>
+			<input type="number" id="eventScore">
+		</div>
+		<div>
+			<label for="opponentRating">Opponent Ratings </label>
+			<input type="number" class="opponentRating" minlength="3" maxlength="4">
+			<input type="number" class="opponentRating" minlength="3" maxlength="4">
+			<input type="number" class="opponentRating" minlength="3" maxlength="4">
+			<input type="number" class="opponentRating" minlength="3" maxlength="4">
+			<input type="number" class="opponentRating" minlength="3" maxlength="4">
+		</div>
+		<div>
+			<button>Submit</button>
+		</div>
 
-<script type="text/javascript" src="ChessCalculator.js"></script>
+	</form>
+
+
+
+<script type="text/javascript" src="chesscalc.js"></script>
 </body>
 </html>
