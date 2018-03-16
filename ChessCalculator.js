@@ -1,6 +1,7 @@
 // Subjects current rating (R)
 var originalRating = [];
 var originalRatingInput = document.getElementById('originalRating');
+var score = document.getElementsByClassName('eventScore');
 var ratingDifference;
 
 // Get ratings of opponents
@@ -79,8 +80,8 @@ oppRatings.map ( function (item) {
 // Add up the winning expectancies (W)  ex.  1.89
 // use reduce
 
-// What was subjects total score for the event (S) 2.5 pts
-// reducevar ratingDifference = oppRatings.map (function (value) {
+
+
 
 
 // Use a K factor of 10, although depends on federation (K)
@@ -91,4 +92,4 @@ oppRatings.map ( function (item) {
 // New rating is the old rating (R) + Total (round down, no decimals)
 
 // Display new rating.
-// newRating.html = newRating
+newRating.innerHTML = "New Rating";
