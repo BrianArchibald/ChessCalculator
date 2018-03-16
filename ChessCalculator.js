@@ -1,8 +1,11 @@
 // Subjects current rating (R)
 var originalRating = [];
 var originalRatingInput = document.getElementById('originalRating');
-var score = document.getElementsByClassName('eventScore');
 var ratingDifference;
+var eventScoreInput = document.getElementById('eventScore').value;
+var eventScore = [];
+
+
 
 // Get ratings of opponents
 // Put opponents in array
@@ -16,6 +19,7 @@ function insert () {
 		}
 	}
 	originalRating.push(originalRatingInput.value);
+	eventScore.push(eventScoreInput.value);
 }
 //-----------oppResults is not working or showing numbers in the array
 oppRatings = oppRatings.map(Number);
@@ -76,20 +80,29 @@ oppRatings.map ( function (item) {
 
 
 // What is the winning expectancies against each opponent ex. .64, .88 etc..
+// var winExpect
+
 
 // Add up the winning expectancies (W)  ex.  1.89
 // use reduce
 
-
-
+// reduce var ratingDifference = oppRatings.map (function (value) {
 
 
 // Use a K factor of 10, although depends on federation (K)
+// var kFactor = 10
 
 
-// Formula -- Total = K * (S- W)   kfactor * (real score - expected score)
+
+// Formula -- total = K * (S- W)   kfactor * (event score - winning expectencies)
+// var total = kFactor * (eventScore - W);
+
+
 
 // New rating is the old rating (R) + Total (round down, no decimals)
+// newRating = originalRating + total
+
+
 
 // Display new rating.
-newRating.innerHTML = "New Rating";
+// newRating.html = newRating
