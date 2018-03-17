@@ -1,10 +1,8 @@
-// Subjects current rating (R)
 var originalRating = [];
 var originalRatingInput = document.getElementById('originalRating');
 var ratingDifference;
-var eventScoreInput = document.getElementById('eventScore').value;
+var eventScoreInput = document.getElementById('eventScore');
 var eventScore = [];
-
 
 
 // Get ratings of opponents
@@ -13,52 +11,17 @@ var oppRatings = [];
 var ratingsInput = document.getElementsByClassName('opponentRating');
 
 function insert () {
+	originalRating.push(originalRatingInput.value);
+	eventScore.push(eventScoreInput.value);
+
 	for (var i = 0; i < ratingsInput.length; i++) {
 		if (typeof ratingsInput[i] !== "undefined") {
 			oppRatings.push(ratingsInput[i].value);
 		}
+		}
 	}
-	originalRating.push(originalRatingInput.value);
-	eventScore.push(eventScoreInput.value);
-}
 //-----------oppResults is not working or showing numbers in the array
 oppRatings = oppRatings.map(Number);
-
-
-
-// var opponents = document.getElementsByClassName('opponentRatings').value;
-	// ratings = [].map.call(opponents, function (rating) {
-	// console.log(rating.value);
-	// });
-
-
-	// [].forEach.call(opponents, function () {
-	//	console.log(opponents);
-	// });
-
-	// Array.prototype.forEach.call(opponents, function (opps) {
-	//	console.log(opps.tagName);
-	// });
-
-
-
-// var ratings = [];
-
-// var ratingsInput = document.getElementsByClassName("opponentRatings");
-
-// function insert () {
-// 	ratings.push( ratingsInput.value );
-
-// 	clearAndShow();
-// }
-
-// function clearAndShow () {
-// 	ratingsInput.value = "";
-
-// 	messageBox.innerHTML = "";
-// }
-
-
 
 
 // Calculate ratings difference between opponent and subject for each opponent
@@ -75,9 +38,6 @@ oppRatings = oppRatings.map(Number);
 oppRatings.map ( function (item) {
 	var ratingDifference = originalRating - item;
 });
-
-
-
 
 // What is the winning expectancies against each opponent ex. .64, .88 etc..
 // var winExpect
