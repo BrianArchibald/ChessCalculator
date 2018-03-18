@@ -1,28 +1,24 @@
 var originalRating = [];
+var eventScore = [];
+var oppRatings = [];
+
 var originalRatingInput = document.getElementById('originalRating');
 var eventScoreInput = document.getElementById('eventScore');
-var eventScore = [];
-
-
-// Get ratings of opponents
-// Put opponents in array
-var oppRatings = [];
 var ratingsInput = document.getElementsByClassName('opponentRating');
 
 function insert () {
 	originalRating.push(originalRatingInput.value);
+	originalRating = originalRating.map(Number);
 	eventScore.push(eventScoreInput.value);
+	eventScore = eventScore.map(Number);
 
 	for (var i = 0; i < ratingsInput.length; i++) {
 		if (typeof ratingsInput[i] !== "undefined") {
 			oppRatings.push(ratingsInput[i].value);
+			oppRatings = oppRatings.map(Number);
 			}
 		}
 	}
-//-----------oppResults is not working or showing numbers in the array
-oppRatings = oppRatings.map(Number);
-
-
 // Calculate ratings difference between opponent and subject for each opponent
 // use forEach     own rating - opp rating
 
@@ -47,9 +43,13 @@ oppRatings = oppRatings.map(Number);
 // }
 // ------------------------------------------------------
 
-const ratingDifference = oppRatings.map(x => x - originalRating);
-console.log (ratingDifference);
+// const ratingDifference = oppRatings.map(x => originalRating - x);
+// console.log(ratingDifference);
 
+
+var ratingDifference = oppRatings.map(function(diff) {
+	return originalRating - diff;
+});
 
 // What is the winning expectancies against each opponent ex. .64, .88 etc..
 // var winExpect
