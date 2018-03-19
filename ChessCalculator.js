@@ -54,6 +54,13 @@ var ratingDifference = oppRatings.map(function(diff) {
 // What is the winning expectancies against each opponent ex. .64, .88 etc..
 // var winExpect
 
+var stat = (oppRatings - originalRating) / 400;
+
+
+var winExpect = 1 / (1 +(Math.pow(10, stat)));
+
+
+
 
 // Add up the winning expectancies (W)  ex.  1.89
 // use reduce
