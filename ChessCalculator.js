@@ -1,6 +1,8 @@
 var originalRating = [];
 var eventScore = [];
 var oppRatings = [];
+var winExpects = [];
+var stats = [];
 
 var originalRatingInput = document.getElementById('originalRating');
 var eventScoreInput = document.getElementById('eventScore');
@@ -54,23 +56,29 @@ var ratingDifference = oppRatings.map(function(diff) {
 // What is the winning expectancies against each opponent ex. .64, .88 etc..
 // var winExpect
 
-var stat = (oppRatings - originalRating) / 400;
+for (i = 0; i < oppRatings.length; i++) {
+	if (typeof oppRatings[i] !== 'undefined') {
+		stats.push((oppRatings - originalRating) / 400);
+	}
+}
 
-
-var winExpect = 1 / (1 +(Math.pow(10, stat)));
-
-
-
+//P(A) = 1/(1+10m) where (power of m) is the rating difference (rating(B)-rating(A)) divided by 400.
+for (i = 0; i < stats.length; i++) {
+	if (typeof stats[i] !== 'undefined') {
+		winExpects.push(1 / (1 +(Math.pow(10, stats))));
+	}
+}
 
 // Add up the winning expectancies (W)  ex.  1.89
 // use reduce
 
-// reduce var ratingDifference = oppRatings.map (function (value) {
-
+var totalExpects = winExpects.reduce(
+  ( accumulator, currentValue ) => accumulator + currentValue,
+  0
+);
 
 // Use a K factor of 10, although depends on federation (K)
-// var kFactor = 10
-
+var kFactor = 10
 
 
 // Formula -- total = K * (S- W)   kfactor * (event score - winning expectencies)
