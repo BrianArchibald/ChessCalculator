@@ -17,19 +17,19 @@ h2 {
 	justify-content: space-evenly;
 }
 
-#originalRating {
+.originalRating {
 	display: grid;
 }
 
-#eventScore {
+.eventScore {
 	display: grid;
 }
 
-#opponentRating {
+.opponentsRating {
 	display: grid;
 }
 
-#submit {
+.submit {
 	display: grid;
 	width: 80px;
 }
