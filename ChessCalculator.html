@@ -3,17 +3,20 @@
 <head>
 	<title>Chess Calc</title>
 </head>
-<link rel="stylesheet" type="text/css" href="chesscalc.css">
+<link rel="stylesheet" type="text/css" href="ChessCalculator.css">
 <body>
-	<h1>Chess Rating Calculator</h1>
+	<h2>Chess Rating Calculator</h2>
 	<form>
-		<div>
+	<section id='wrapper'>
+		<div id='originalRating'>
 			<label for="originalRating">Your Rating </label>
 			<input type="number" id="originalRating" minlength="3" maxlength="4">
-			<label for="eventScore">Event Score </label>
-			<input type="number" id="eventScore" step="0.1" placeholder="e.g. 2.5">
 		</div>
-		<div>
+		<div id ='eventScore'>
+			<label for="eventScore">Event Score </label>
+			<input type="number" id="eventScore" placeholder="ex. 2.5">
+		</div>
+		<div id="opponentRating">
 			<label for="opponentRating">Opponent Ratings </label>
 			<input type="number" class="opponentRating" minlength="3" maxlength="4">
 			<input type="number" class="opponentRating" minlength="3" maxlength="4">
@@ -21,13 +24,13 @@
 			<input type="number" class="opponentRating" minlength="3" maxlength="4">
 			<input type="number" class="opponentRating" minlength="3" maxlength="4">
 		</div>
-		<div>
+		<div id="submit">
 			<input type="button" value="Submit" onclick="insert()" />
 		</div>
-		<div>
-			<input type="text" name="newRating" placeholder="New Rating" id="newRating">
+		<div id="updatedRating">
+			<input type='text' name='newRating' id ="newRating" placeholder="New Rating">
 		</div>
-
+	</section>
 	</form>
 
 

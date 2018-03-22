@@ -1,0 +1,40 @@
+body {
+	background-color: #e0e1e2;
+}
+
+h2 {
+	color: #2e5ca5;
+	text-align: center;
+}
+.opponentRating {
+	width: 160.8px;
+}
+
+#wrapper {
+	display: grid;
+	grid-template-rows; rows;
+	grid-gap: 10px;
+	justify-content: space-evenly;
+}
+
+#originalRating {
+	display: grid;
+}
+
+#eventScore {
+	display: grid;
+}
+
+#opponentRating {
+	display: grid;
+}
+
+#submit {
+	display: grid;
+	width: 80px;
+}
+
+#updatedRating {
+	display: grid;
+	width: 160.8px;
+}

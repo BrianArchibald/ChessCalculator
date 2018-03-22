@@ -27,7 +27,7 @@ function insert () {
 
 	for (var i = 0; i < ratingsInput.length; i++) {
 		if (typeof ratingsInput[i] !== "undefined") {
-			oppRatings.push();
+			oppRatings.push(ratingsInput[i].value);
 			
 			}
 		}
