@@ -1,19 +1,21 @@
 body {
 	background-color: #e0e1e2;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
-	color: #2e5ca5;
-	text-align: center;
+	color: white;
+    text-shadow: 1px 1px 2px black, 0 0 5px blue, 0 0 5px darkblue;
+    text-align: center;
 }
 .opponentRating {
-	width: 160.8px;
+	width: 168.8px;
 }
 
 #wrapper {
 	display: grid;
 	grid-template-rows; rows;
-	grid-gap: 10px;
+	grid-gap: 15px;
 	justify-content: space-evenly;
 }
 
@@ -31,7 +33,7 @@ h2 {
 
 .submit {
 	display: grid;
-	width: 80px;
+	width: 172.8px;
 }
 
 #updatedRating {
