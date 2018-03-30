@@ -39,15 +39,17 @@ function insert () {
 		});
 
 		//P(A) = 1/(1+10m) where (power of m) is the rating difference (rating(B)-rating(A)) divided by 400.
-		// for (i = 0; i < stats.length; i++) {
-		// 	if (typeof stats[i] !== 'undefined') {
-		// winExpects.push(1 / (1 +(Math.pow(10, stats[i]))));
-		// 	}
-		// }
+		for (i = 0; i < stats.length; i++) {
+			if (typeof stats[i] !== 'undefined') {
+		winExpects.push(1 / (1 +(Math.pow(10, stats[i]))));
+			}
+		}
 
-		stats.forEach(function(item) {
-			winExpects.push(1 / (1 +(Math.pow(10, stats))))
-		});
+		//below forEach gives NaN as new rating /////
+
+		// stats.forEach(function(item) {
+		// 	winExpects.push(1 / (1 +(Math.pow(10, stats))))
+		// });
 
 
 		var totalExpects = winExpects.reduce(function( accumulator, currentValue ) {return accumulator + currentValue;
