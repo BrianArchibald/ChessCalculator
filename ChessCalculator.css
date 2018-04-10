@@ -31,6 +31,10 @@ h2 {
 	display: grid;
 }
 
+.kFactor {
+	display: grid;
+}
+
 .submit {
 	display: grid;
 	width: 172.8px;
@@ -38,5 +42,5 @@ h2 {
 
 #updatedRating {
 	display: grid;
-	width: 160.8px;
+	width: 172.8px;
 }
